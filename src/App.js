@@ -1,20 +1,18 @@
-import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import { Container } from "react-bootstrap";
 import Login from "./Pages/Login";
 import List from "./Pages/List";
 import Home from "./Pages/Home";
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} exact />
-          <Route path="/list" element={<List />} exact />
-          <Route path="/login" element={<Login />} exact />
-        </Routes>
-      </Router>
-    </div>
+    <Container className="h-100 m-0 p-0">
+      <Routes>
+        <Route path="/" element={<Home />} exact />
+        <Route path="/list" element={<List />} exact />
+        <Route path="/login" element={<Login />} exact />
+      </Routes>
+    </Container>
   );
 }
 
