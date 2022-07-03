@@ -1,14 +1,15 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 
-import NavBar from "../Components/NavBar";
+import Navbar from "../Components/Navbar";
 
 const Home = () => {
   return (
     <>
-      <NavBar />
-      <div className="home">
+      <Navbar />
+      <Container>
         <h1>Home</h1>
-      </div>
+      </Container>
     </>
   );
 };
