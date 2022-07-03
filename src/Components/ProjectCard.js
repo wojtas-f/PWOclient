@@ -1,6 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Card, Button, Col } from "react-bootstrap";
-const ListItem = ({ project }) => {
+
+const ProjectCard = ({ project }) => {
   return (
     <Col sm={3}>
       <Card className="h-100" style={{ width: "18rem" }}>
@@ -22,4 +24,13 @@ const ListItem = ({ project }) => {
   );
 };
 
-export default ListItem;
+ProjectCard.propTypes = {
+  project: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    shortDescription: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    categories: PropTypes.array.isRequired,
+  }).isRequired,
+};
+
+export default ProjectCard;

@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
 
-import ListItem from "../Components/ListItem";
+import ProjectCard from "../Components/ProjectCard";
 import Navbar from "../Components/Navbar";
 
 const Projects = () => {
@@ -17,33 +17,38 @@ const Projects = () => {
               author: "Test Author",
               categories: ["web development", "AI"],
               shortDescription: "lorem ipsum dolor sit amet, consectetur",
+              reserved: false,
             },
             {
               title: "Test 2",
               author: "Test Author",
               categories: ["web development", "wordpress", "e-commerce"],
               shortDescription: "lorem ipsum dolor sit amet, consectetur",
+              reserved: false,
             },
             {
               title: "Test 3",
               author: "Test Author",
               categories: ["PC"],
               shortDescription: "lorem ipsum dolor sit amet, consectetur",
+              reserved: false,
             },
             {
               title: "Test 3",
               author: "Test Author",
               categories: ["PC"],
               shortDescription: "lorem ipsum dolor sit amet, consectetur",
+              reserved: false,
             },
             {
               title: "Test 3",
               author: "Test Author",
               categories: ["PC"],
               shortDescription: "lorem ipsum dolor sit amet, consectetur",
+              reserved: false,
             },
           ].map((project, index) => (
-            <ListItem key={`${index}_list_item`} project={project} />
+            <ProjectCard key={`${index}_list_item`} project={project} />
           ))}
         </Row>
       </Container>
